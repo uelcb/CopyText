@@ -5,83 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/copy-4364960-3619455.png"/>
-    <title> Corpy </title>
+    <title>Corpy</title>
  
-        <style>
-        {
-            margin: 0px; 
-            padding: 0px; 
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
-        }
-        h1 {
-          font-weight: bold;
-          font-size: 40px;
-          display: inline;
-          width: 100%;
-          cursor: default;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-image: linear-gradient(to right, rgb(255, 102, 48) 0%, rgb(0, 0, 0) 33%);
-        }
-        h2 {
-          font-size: 12px;
-          color: #3f3f3f;
-          cursor: default;
-        }
-        h3 {
-          font-size: 12px;
-          color: #3f3f3f;
-          text-align: left;
-          cursor: default;
-        }
-        body {
-          margin: 1%;
-          padding: 1%;
-          display: block;
-          justify-content: center;
-          background: #dbdde0;
-          text-align: center;
-        }
-        textarea{
-          font-size: 12px;
-          border-radius: 10px;
-          border: none;
-          padding: 10px;
-          background-color: #ffffff9f;
-          color: #06224a;
-          width: 500px;
-          justify-content: left;
-        }
-        textarea:focus {
-          outline: none;
-        }
- 
-        button {
-          font-size: 25px;
-          border-radius: 50px;
-          border: none;
-          padding: 12px;
-          background-color: #ff6630;
-          color: white;
-          transition: 0.3s;
-          width: 200px;
-        }
-        button:hover {
-          background-color: #d15528;
-          transition: 0.5s;
-          cursor: pointer;
-        }
-        button:active {
-          background-color: #803419;
+   <style>
+       * {
+           margin: 0px; 
+           padding: 0px; 
+           font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           box-sizing: border-box;
+           background-color: black;
+       }
+       html {
+           height: 100%;
+       }
+       .C {
+           font-weight: bold;
+           font-size: 50px;
+           display: inline;
+           width: 100%;
+           cursor: default;
+           color: #ff6630;
+       }
+       .orpy {
+           font-weight: bold;
+           font-size: 45px;
+           display: inline;
+           width: 100%;
+           cursor: default;
+           color: white;
+       }
+       h2 {
+           font-size: 12px;
+           color: #9c9c9c;
+           cursor: default;
+       }
+       h3 {
+           font-size: 12px;
+           color: #3f3f3f;
+           text-align: left;
+           cursor: default;
+       }
+       td, th {
+           padding: .7em;
+           margin: 0;
+           text-align: center;
+           border: none;
+       }
+       table{
+           width: 100%;
+           margin-bottom : .5em;
+           table-layout: fixed;
+           text-align: center;
+           border: none;
+       }
+       body {
+           margin: 0%;
+           padding: 1%;
+           display: block;
+           justify-content: center;
+           background-color: black;
+           text-align: center;
+           min-height: 100%;
+       }
+       textarea{
+           font-size: 12px;
+           border-radius: 10px;
+           border: none;
+           padding: 10px;
+           background-color: #ffffffee;
+           width: 500px;
+           justify-content: left;
+       }
+       textarea:focus {
+           outline: none;
+       }
+
+       button {
+           font-size: 25px;
+           border-radius: 50px;
+           border: none;
+           padding: 12px;
+           background-color: #ff6630;
+           color: white;
+           transition: 0.3s;
+           width: 200px;
+       }
+       button:hover {
+           background-color: #d15528;
+           transition: 0.5s;
+           cursor: pointer;
+       }
+       button:active {
+           background-color: #803419;
           transition: 0.2s;
-        }
-    </style>
+      }
+  </style>
 </head>
 <body>
-  <h1> Corpy </h1>
+  <h1>
+    <span class="C">C</span><span class="orpy">orpy</span>
+</h1>
   <h2> Escreva o que deseja deixar salvo, e clique no botão para copiar!</h2>
-  <br>
-
+    <table border="1">
+    <tr>
+    <td>
     <textarea name="text" id="texto" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto()">Copiar</button></div>
     <br>
@@ -90,7 +117,8 @@
     <br>
     <textarea name="text" id="texto2" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto2()">Copiar</button></div>
-    <br>
+    </td>
+    <td>
     <textarea name="text" id="texto3" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto3()">Copiar</button></div>
     <br>
@@ -99,9 +127,20 @@
     <br>
     <textarea name="text" id="texto5" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto5()">Copiar</button></div>
+    </td>
+    <td>
+    <textarea name="text" id="texto6" cols="30" rows="10"></textarea>
+    <div><button onclick="copiarTexto6()">Copiar</button></div>
     <br>
+    <textarea name="text" id="texto7" cols="30" rows="10"></textarea>
+    <div><button onclick="copiarTexto7()">Copiar</button></div>
+    <br>
+    <textarea name="text" id="texto8" cols="30" rows="10"></textarea>
+    <div><button onclick="copiarTexto8()">Copiar</button></div>
+    </td>
+    </tr>
+    </table>
     <h3>Beta 0.0.3</h3>
-
 </body>
 </html>
 
@@ -143,6 +182,27 @@
 
     function copiarTexto5() {
       let textoCopiado = document.getElementById("texto5");
+      textoCopiado.select();
+      textoCopiado.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+    }
+
+    function copiarTexto6() {
+      let textoCopiado = document.getElementById("texto6");
+      textoCopiado.select();
+      textoCopiado.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+    }
+
+    function copiarTexto7() {
+      let textoCopiado = document.getElementById("texto7");
+      textoCopiado.select();
+      textoCopiado.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+    }
+
+    function copiarTexto8() {
+      let textoCopiado = document.getElementById("texto8");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
