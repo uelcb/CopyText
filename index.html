@@ -58,16 +58,13 @@
           body::-webkit-scrollbar {
             width: 5px;
           }
-
           body::-webkit-scrollbar-track {
             background-color: #888;
           }
-
           body::-webkit-scrollbar-thumb {
             background-color: #3f3f3f;
             border-radius: 5px;
           }
-
           body::-webkit-scrollbar-thumb:hover {
             background-color: #555;
           }
@@ -83,34 +80,27 @@
           min-height: 150px; 
           resize: none;
           }
-
           textarea:focus {
             outline: none;
             border-color: #1e87f0;
             box-shadow: 0 0 0 2px #1e87f0;
           }
-
           textarea::placeholder {
             color: #999;
           }
-
           textarea::-webkit-scrollbar {
-            width: 8px;
-          }
-
+          width: 5px;
+            }
           textarea::-webkit-scrollbar-thumb {
-            background-color: #aaa;
-            border-radius: 4px;
-          }
-
+          background-color: #3f3f3f;
+          border-radius: 4px;
+           }
           textarea::-webkit-scrollbar-thumb:hover {
-            background-color: #888;
-          }
-
+          background-color: #3f3f3f;
+           }
           textarea:focus {
-           outline: none;
-       }
-
+          outline: none;
+           }
        button {
           font-family: 'Poppins', Arial, sans-serif;
           display: inline-flex;
@@ -126,28 +116,31 @@
           width: 200px;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
-
         button::before {
           font-family: "Font Awesome 5 Free";
           font-weight: 900;
           font-size: 18px;
           margin-right: 10px;
         }
-
         button:hover {
           background-color: #ff5422;
           transition: 0.3s;
           cursor: pointer;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-
         button:active {
           background-color: #d15528;
           transition: 0.2s;
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
           transform: translateY(2px);
         }
-
+        .additional-content {
+          background-color: #3f3f3f;
+          height: 1000px; 
+          width: 80%; 
+          margin: 0 auto;
+          border-radius: 20px;
+        }
   </style>
 </head>
 <body>
@@ -191,6 +184,10 @@
     </td>
     </tr>
     </table>
+    <br><br><br>
+
+    <div class="additional-content"></div>
+
     <h3>Beta 0.0.5</h3>
 </body>
 </html>
@@ -257,6 +254,33 @@
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
+    }
+    function salvarMensagens() {
+      var textos = document.querySelectorAll('textarea[name="text"]');
+
+      var mensagens = [];
+      for (var i = 0; i < textos.length; i++) {
+        mensagens.push(textos[i].value);
+      }
+      localStorage.setItem('mensagens', JSON.stringify(mensagens));
+    }
+    function carregarMensagens() {
+      var mensagens = localStorage.getItem('mensagens');
+
+      if (mensagens) {
+        mensagens = JSON.parse(mensagens);
+
+        var textos = document.querySelectorAll('textarea[name="text"]');
+        for (var i = 0; i < textos.length; i++) {
+          textos[i].value = mensagens[i] || '';
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', carregarMensagens);
+
+    var textos = document.querySelectorAll('textarea[name="text"]');
+    for (var i = 0; i < textos.length; i++) {
+      textos[i].addEventListener('input', salvarMensagens);
     }
 
 </script>
