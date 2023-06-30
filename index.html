@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="86400"> 
-    <meta name="description" content="Agilize a resposta nos seus atendimentos, venha conhecer nossos serviços!">
-    <link rel="icon" type="image/png" href="Icon.png"/>
-    <title>Corpy</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="86400"> 
+  <meta name="description" content="Agilize a resposta nos seus atendimentos, venha conhecer nossos serviços!">
+  <link rel="icon" type="image/png" href="Icon.png"/>
+  <title>Corpy</title>
+
  
    <style>
        * {
@@ -23,12 +24,12 @@
       img {
           max-width: 300px;
       }
-          h2 {
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      h2 {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
            font-size: 12px;
            color: #999999;
            cursor: default;
-       }
+        }
        h3 {
            font-size: 12px;
            color: #3f3f3f;
@@ -57,58 +58,67 @@
            text-align: center;
            min-height: 100%;
        }
-          body::-webkit-scrollbar {
-            width: 5px;
-          }
-          body::-webkit-scrollbar-track {
-            background-color: #888;
-          }
-          body::-webkit-scrollbar-thumb {
-            background-color: #3f3f3f;
-            border-radius: 5px;
-          }
-          body::-webkit-scrollbar-thumb:hover {
-            background-color: #555;
-          }
-       textarea {
+        body::-webkit-scrollbar {
+          width: 5px;
+        }
+
+        body::-webkit-scrollbar-track {
+          background-color: #888;
+        }
+
+        body::-webkit-scrollbar-thumb {
+          background-color: #3f3f3f;
+          border-radius: 5px;
+        }
+
+        body::-webkit-scrollbar-thumb:hover {
+          background-color: #555;
+        }
+        textarea {
           font-size: 18px;
           border-radius: 20px;
           border: 1px solid #ccc;
           padding: 12px;
           background-color: #f5f5f5;
           width: 30vw;
-          min-width: 300px;
+          min-width: 500px;
           height: 30vh;
           min-height: 150px; 
           resize: none;
           }
+
           textarea:focus {
             outline: none;
             border-color: #1e87f0;
             box-shadow: 0 0 0 2px #1e87f0;
           }
+
           textarea::placeholder {
             color: #999;
           }
+
           textarea::-webkit-scrollbar {
-          width: 5px;
-            }
+            width: 8px;
+          }
+
           textarea::-webkit-scrollbar-thumb {
-          background-color: #3f3f3f;
-          border-radius: 4px;
-           }
+            background-color: #aaa;
+            border-radius: 4px;
+          }
+
           textarea::-webkit-scrollbar-thumb:hover {
-          background-color: #3f3f3f;
-           }
+            background-color: #888;
+          }
+
           textarea:focus {
-          outline: none;
-           }
-       button {
+           outline: none;
+       }
+       .button-textarea {
           font-family: 'Poppins', Arial, sans-serif;
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          font-size: 18px;
+          font-size: 16px;
           border-radius: 50px;
           border: none;
           padding: 12px 20px;
@@ -117,25 +127,53 @@
           transition: 0.3s;
           width: 200px;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-        button::before {
-          font-family: "Font Awesome 5 Free";
+          }
+        .button-textarea:before {
           font-weight: 900;
           font-size: 18px;
           margin-right: 10px;
-        }
-        button:hover {
-          background-color: #ff5422;
+          }
+        .button-textarea:hover {
+          background-color: #d15528;
           transition: 0.3s;
           cursor: pointer;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        button:active {
-          background-color: #d15528;
+          }
+        .button-textarea {
+          background-color: #ff6630;
           transition: 0.2s;
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
           transform: translateY(2px);
         }
+        .image-container {
+          float: left;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin-left: 780px;
+          margin-bottom: 50px;
+        }
+        .text-container {
+          float: left;
+          text-align: center;
+          position: relative;
+          left: -350px;
+          top: 140px;
+          }
+        .button-container {
+          font-family: "Fakt Soft Pro", sans-serif;
+          font-size: 14px;
+          border: 1px solid rgb(90, 90, 90);
+          border-radius: 50px;
+          background-color: transparent;
+          color: rgb(90, 90, 90);
+          padding: 8px 15px;
+          margin-top: 20px;
+          margin-right: -300px;
+          cursor: pointer;
+          letter-spacing: 1px;
+          }
         .additional-content {
           background-color: rgb(30, 30, 30);
           height: 70px; 
@@ -149,47 +187,51 @@
   </style>
 </head>
 <body>
-    <div class="container">
+  <div class="container">
+    <div class="image-container">
       <img src="Corpy.png" alt="CorpyLogo">
     </div>
-  <h2>Simplifique seu dia, digite o que deseja salvar e copie com um clique!</h2>
-    <br>
+    <div class="text-container">
+      <h2>Simplifique seu dia, digite o que deseja salvar e copie com um clique!</h2>
+    </div>
+    </div>
+    <div> 
+      <button id="meuBotao" class="button-container">↗</button>
+    </div>
     <table border="1">
     <tr>
     <td>
     <textarea name="text" id="texto" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto()">Copiar</button></div>
+    <div><button class="button-textarea" onclick="copiarTexto()">Copiar</button></div>
     <br>
     <textarea name="text" id="texto1" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto1()">Copiar</button></div>
+    <div><button class="button-textarea" onclick="copiarTexto1()">Copiar</button></div>
     <br>
     <textarea name="text" id="texto2" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto2()">Copiar</button></div>
+    <div><button class="button-textarea" onclick="copiarTexto2()">Copiar</button></div>
     </td>
     <td>
     <textarea name="text" id="texto3" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto3()">Copiar</button></div>
+    <div><button class="button-textarea" onclick="copiarTexto3()">Copiar</button></div>
     <br>
     <textarea name="text" id="texto4" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto4()">Copiar</button></div>
+    <div><button class="button-textarea" onclick="copiarTexto4()">Copiar</button></div>
     <br>
     <textarea name="text" id="texto5" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto5()">Copiar</button></div>
+    <div><button class="button-textarea" onclick="copiarTexto5()">Copiar</button></div>
     </td>
     <td>
     <textarea name="text" id="texto6" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto6()">Copiar</button></div>
+    <div><button class="button-textarea" onclick="copiarTexto6()">Copiar</button></div>
     <br>
     <textarea name="text" id="texto7" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto7()">Copiar</button></div>
+    <div><button class="button-textarea" onclick="copiarTexto7()">Copiar</button></div>
     <br>
     <textarea name="text" id="texto8" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto8()">Copiar</button></div>
+    <div><button class="button-textarea" onclick="copiarTexto8()">Copiar</button></div>
     </td>
     </tr>
     </table>
-    <br><br><br>
-
     <div class="additional-content">
       Acesse pelo computador.
     </div>
@@ -197,7 +239,6 @@
     <h3>Beta 0.0.5</h3>
 </body>
 </html>
-
 <script>
     function copiarTexto() {
       let textoCopiado = document.getElementById("texto");
@@ -205,56 +246,48 @@
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto1() {
       let textoCopiado = document.getElementById("texto1");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto2() {
       let textoCopiado = document.getElementById("texto2");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto3() {
       let textoCopiado = document.getElementById("texto3");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto4() {
       let textoCopiado = document.getElementById("texto4");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto5() {
       let textoCopiado = document.getElementById("texto5");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto6() {
       let textoCopiado = document.getElementById("texto6");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto7() {
       let textoCopiado = document.getElementById("texto7");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto8() {
       let textoCopiado = document.getElementById("texto8");
       textoCopiado.select();
@@ -289,4 +322,9 @@
       textos[i].addEventListener('input', salvarMensagens);
     }
 
+    var meuBotao = document.getElementById("meuBotao");
+    meuBotao.addEventListener("click", function() {
+
+      window.open("https://bio.site/corpy.app");
+    });
 </script>
