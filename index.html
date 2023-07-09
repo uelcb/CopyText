@@ -168,22 +168,26 @@
     <table border="1">
     <tr>
     <td>
+    <textarea name="text" id="texto" cols="30" rows="10"></textarea>
+    <div><button onclick="copiarTexto()">Copiar</button></div>
+    <br>
     <textarea name="text" id="texto1" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto1()">Copiar</button></div>
     <br>
     <textarea name="text" id="texto2" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto2()">Copiar</button></div>
-    <br>
+    </td>
+    <td>
     <textarea name="text" id="texto3" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto3()">Copiar</button></div>
     <br>
     <textarea name="text" id="texto4" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto4()">Copiar</button></div>
-    </td>
-    <td>
+    <br>
     <textarea name="text" id="texto5" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto5()">Copiar</button></div>
-    <br>
+    </td>
+    <td>
     <textarea name="text" id="texto6" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto6()">Copiar</button></div>
     <br>
@@ -192,19 +196,6 @@
     <br>
     <textarea name="text" id="texto8" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto8()">Copiar</button></div>
-    </td>
-    <td>
-    <textarea name="text" id="texto9" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto9()">Copiar</button></div>
-    <br>
-    <textarea name="text" id="texto10" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto10()">Copiar</button></div>
-    <br>
-    <textarea name="text" id="texto11" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto11()">Copiar</button></div>
-    <br>
-    <textarea name="text" id="texto12" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto12()">Copiar</button></div>
     </td>
     </tr>
     </table>
@@ -217,6 +208,12 @@
 </body>
 </html>
 <script>
+    function copiarTexto() {
+      let textoCopiado = document.getElementById("texto");
+      textoCopiado.select();
+      textoCopiado.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+    }
     function copiarTexto1() {
       let textoCopiado = document.getElementById("texto1");
       textoCopiado.select();
@@ -261,30 +258,6 @@
     }
     function copiarTexto8() {
       let textoCopiado = document.getElementById("texto8");
-      textoCopiado.select();
-      textoCopiado.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-    }
-    function copiarTexto9() {
-      let textoCopiado = document.getElementById("texto9");
-      textoCopiado.select();
-      textoCopiado.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-    }
-    function copiarTexto10() {
-      let textoCopiado = document.getElementById("texto10");
-      textoCopiado.select();
-      textoCopiado.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-    }
-    function copiarTexto11() {
-      let textoCopiado = document.getElementById("texto11");
-      textoCopiado.select();
-      textoCopiado.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-    }
-    function copiarTexto12() {
-      let textoCopiado = document.getElementById("texto12");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
