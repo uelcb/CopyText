@@ -8,7 +8,6 @@
     <meta name="description" content="Agilize a resposta nos seus atendimentos, venha conhecer nossos serviços!">
     <link rel="icon" type="image/png" href="Icon.png"/>
     <title>Corpy</title>
- 
    <style>
        * {
            margin: 0px; 
@@ -155,41 +154,36 @@
           left: 57px;
           top: 20px;
           }
-
   </style>
 </head>
 <body>
-    <div class="container">
-      <img src="Corpy.png" alt="CorpyLogo">
-    </div>
+  <div class="container">
+  <img src="Corpy.png" alt="CorpyLogo">
+  </div>
   <h2>Simplifique seu dia, digite o que deseja salvar e copie com um clique!</h2>
     <div class="informacoes">
-      <a href="https://www.instagram.com/corpy.app/" target="_blank">Mais informações</a>
+    <a href="https://www.instagram.com/corpy.app/" target="_blank">Mais informações</a>
     </div>
     <br>
     <table border="1">
     <tr>
     <td>
-    <textarea name="text" id="texto" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto()">Copiar</button></div>
-    <br>
     <textarea name="text" id="texto1" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto1()">Copiar</button></div>
     <br>
     <textarea name="text" id="texto2" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto2()">Copiar</button></div>
-    </td>
-    <td>
+    <br>
     <textarea name="text" id="texto3" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto3()">Copiar</button></div>
     <br>
     <textarea name="text" id="texto4" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto4()">Copiar</button></div>
-    <br>
-    <textarea name="text" id="texto5" cols="30" rows="10"></textarea>
-    <div><button onclick="copiarTexto5()">Copiar</button></div>
     </td>
     <td>
+    <textarea name="text" id="texto5" cols="30" rows="10"></textarea>
+    <div><button onclick="copiarTexto5()">Copiar</button></div>
+    <br>
     <textarea name="text" id="texto6" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto6()">Copiar</button></div>
     <br>
@@ -199,10 +193,22 @@
     <textarea name="text" id="texto8" cols="30" rows="10"></textarea>
     <div><button onclick="copiarTexto8()">Copiar</button></div>
     </td>
+    <td>
+    <textarea name="text" id="texto9" cols="30" rows="10"></textarea>
+    <div><button onclick="copiarTexto9()">Copiar</button></div>
+    <br>
+    <textarea name="text" id="texto10" cols="30" rows="10"></textarea>
+    <div><button onclick="copiarTexto10()">Copiar</button></div>
+    <br>
+    <textarea name="text" id="texto11" cols="30" rows="10"></textarea>
+    <div><button onclick="copiarTexto11()">Copiar</button></div>
+    <br>
+    <textarea name="text" id="texto12" cols="30" rows="10"></textarea>
+    <div><button onclick="copiarTexto12()">Copiar</button></div>
+    </td>
     </tr>
     </table>
     <br><br><br>
-
     <div class="additional-content">
       Acesse pelo computador.
     </div>
@@ -210,73 +216,81 @@
     <h3>Beta 0.0.5</h3>
 </body>
 </html>
-
 <script>
-    function copiarTexto() {
-      let textoCopiado = document.getElementById("texto");
-      textoCopiado.select();
-      textoCopiado.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-    }
-
     function copiarTexto1() {
       let textoCopiado = document.getElementById("texto1");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto2() {
       let textoCopiado = document.getElementById("texto2");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto3() {
       let textoCopiado = document.getElementById("texto3");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto4() {
       let textoCopiado = document.getElementById("texto4");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto5() {
       let textoCopiado = document.getElementById("texto5");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto6() {
       let textoCopiado = document.getElementById("texto6");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto7() {
       let textoCopiado = document.getElementById("texto7");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
-
     function copiarTexto8() {
       let textoCopiado = document.getElementById("texto8");
       textoCopiado.select();
       textoCopiado.setSelectionRange(0, 99999)
       document.execCommand("copy");
     }
+    function copiarTexto9() {
+      let textoCopiado = document.getElementById("texto9");
+      textoCopiado.select();
+      textoCopiado.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+    }
+    function copiarTexto10() {
+      let textoCopiado = document.getElementById("texto10");
+      textoCopiado.select();
+      textoCopiado.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+    }
+    function copiarTexto11() {
+      let textoCopiado = document.getElementById("texto11");
+      textoCopiado.select();
+      textoCopiado.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+    }
+    function copiarTexto12() {
+      let textoCopiado = document.getElementById("texto12");
+      textoCopiado.select();
+      textoCopiado.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+    }
     function salvarMensagens() {
       var textos = document.querySelectorAll('textarea[name="text"]');
-
       var mensagens = [];
       for (var i = 0; i < textos.length; i++) {
         mensagens.push(textos[i].value);
@@ -285,10 +299,8 @@
     }
     function carregarMensagens() {
       var mensagens = localStorage.getItem('mensagens');
-
       if (mensagens) {
         mensagens = JSON.parse(mensagens);
-
         var textos = document.querySelectorAll('textarea[name="text"]');
         for (var i = 0; i < textos.length; i++) {
           textos[i].value = mensagens[i] || '';
@@ -296,10 +308,8 @@
       }
     }
     window.addEventListener('DOMContentLoaded', carregarMensagens);
-
     var textos = document.querySelectorAll('textarea[name="text"]');
     for (var i = 0; i < textos.length; i++) {
       textos[i].addEventListener('input', salvarMensagens);
     }
-
 </script>
